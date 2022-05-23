@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Завдання 3</title>
+  </head>
+  <body>
+    <script>
+      let num = prompt(`Уведіть число: `);
+function checkNumber(num) {
+  const arrNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  if (!isNaN(num)) {
+    let result = [];
+    if (num < 0) {
+      result.push(`Число выд’ємне!`);
+    } else if (num > 0) {
+      result.push(`Число Число додатнє!`);
+    }
+    let flag = true;
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag === false) {
+      result.push(`Число не просте.`);
+    } else {
+      result.push(`Число просте.`);
+    }
+    for (let j = 0; j < arrNums.length; j++) {
+      if (num % arrNums[j] === 0) {
+        result.push(`Число ділиться на ${arrNums[j]}.`);
+      }
+    }
+    alert(result.join(` `));
+  } else {
+    alert(`!Помилка!`);
+  }
+}
+checkNumber(num);
+    </script>
+  </body>
+</html>

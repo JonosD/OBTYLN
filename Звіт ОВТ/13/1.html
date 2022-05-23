@@ -1,0 +1,27 @@
+<html>
+<head>   
+<title>Завдання 1</title>
+    <script>
+        function Box (x, y, z, A) {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.A = A;  
+        }
+       Box.prototype.volume =  function () {document.write("Box:" + this.x*this.y*this.z)
+        }
+       Box.prototype.equals = function (otherObj) {
+            if (this.A === otherObj.A) {
+                return true;
+            }
+            return false;
+            }
+        var box1 = new Box (10, 20, 10, 'carton;');
+        var box2 = new Box (10, 30, 10, 'carton;');
+        box1.volume(); document.write(box1.A +'<br><br>');
+        box2.volume(); document.write(box2.A +'<br><br>');
+        var res = box1.equals(box2);
+        document.write(" box1 == box2 => " + res + ";" + '<br>');
+    </script>
+</head>
+</html>

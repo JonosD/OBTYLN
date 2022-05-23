@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Завдання 2</title>
+</head>
+<body>
+    <script>
+        var a = Array (1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        document.write (a.join (", "));
+        document.write ("<br/>");
+
+        document.write ("Найбільше значення масиву:  " + Math.max.apply (null, a) + ";" + "<br/>");
+        document.write ("Найменше значення масиву:  " + Math.min.apply (null, a) + ";");
+        var result = a.reduce (function (sum, current) {
+            return sum + current});
+        document.write ("<br/>" + "Загальна сума елементів:  " + result + ";");
+
+        average = a.reduce (function (avg, value, _, {length}) {
+            return avg + value / length; }, 0);
+        document.write ("<br/>" + "Середнє арифметичне:  " + average + ";");
+        
+        document.write ("<br/>" + "Непарні значення:  ");
+        for (var i = 1; i <= 10; i += 2) { document.write (i + "; ");}
+    </script>
+</body>
+</html>

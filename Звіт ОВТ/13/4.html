@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Завдання 4</title>
+    <script>
+        function Human (Name, surname, height) {
+            this.Name = Name;
+            this.surname = surname;
+            this.height = height;
+        }
+        Human.prototype.print = function () {
+            document.write ("<br>" + "Name: " + this.Name + "<br>" + "Surname: " + this.surname + "<br>" + "Height: " + this.height + "<br>");
+        }
+        Human.maxHeight = 200;
+        var human1 = new Human ("Жан", "Кірштайн", 192);
+        human1.print ();
+        var human2 = new Human ("Флок", "Форстер", 180);
+        human2.print ();
+        Human.maxHeight = 200;
+    </script>
+</head>
+</html>

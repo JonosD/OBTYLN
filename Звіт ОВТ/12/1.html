@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Завдання 1</title>
+</head>
+<body>
+    <script>
+  var Менеджер = {
+      Name: "Семенюк",
+      surName: "Семен", 
+      Sex: "чоловік",
+      Age: 20,
+     
+      IQ: 150,
+    show: function () {
+        document.write ("Менеджер: " + "<br/>" + "Ім'я: " + this.Name + "<br/>" + "Прізвище: " + this.surName + "<br/>" + "Вік: " + this.Age + "<br/>" + "Стать: " + this.Sex + "<br/>" + "IQ: " + this.IQ + "<br>" + "<br>");
+    }
+  }
+  Менеджер.show ();
+  var Секретар = new Object ();
+        Секретар.Name = "Яшок";
+        Секретар.surName = "Яша";
+        Секретар.Sex = "чоловік";
+        Секретар.Age = 20;
+        Секретар.IQ = 150;
+        Секретар.f = function () {
+            document.write ("Секретар: " + "<br>" + "Ім'я:" + Секретар.Name + "<br/>" + "Прізвище: " + Секретар.surName + "<br/>" + "Вік: " + Секретар.Age + "<br/>" + "Стать: " + Секретар.Sex + "<br/>" + "IQ: " + Секретар.IQ);
+        };
+        Секретар.f();
+    </script>
+</body>
+</html>

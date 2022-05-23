@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Завдання 3</title>
+</head>
+<body>
+    <script>
+   
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 10; j++){
+            document.write("*" + "&nbsp");
+        }
+        document.write("<br/>");
+    }
+
+    for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < i; j++) {
+            document.write("*" + "&nbsp");
+        }
+            document.write("<br/>");
+        }
+            document.write("<br/><br/>");
+
+ 
+    var line = 7;
+    var space = 7;
+    var star = 1;
+
+    for (var h = 0; h < line; h++) {
+        for (var w = 0; w < space; w++) {
+            document.write("&nbsp\n");
+        }
+        for (var s = 0; s < star; s++) {
+            document.write("*");
+        }
+        space -= 1;
+        star += 2;
+        document.write("<br/>");
+    }
+    document.write("<br/><br/>");
+
+     for (var i = 0; i < 7; i++) {
+         for (var j = 0; j < (7 - 1 - i); j++) {
+             document.write("&nbsp");
+         }
+         for (var k = 0; k < (2 * i + 1); k++) {
+             if (i == 0) {
+                 document.write("*");
+             } else if (k == 0 || k == (2 * i)) {
+                 document.write("*");
+             } else {
+                 document.write("&nbsp");
+             }
+         }
+         document.write("<br/>");
+     }
+     for (var i = 0; i < 7; i ++) {
+			 for (var j = 0; j <(i + 1); j ++) {
+             document.write("&nbsp");
+			}
+			 for (var k = 0; k < 2 * (7 - i) - 1; k ++) {
+				 if (i == 6) {
+                 document.write("*");
+				 } else if (k == 0 || k == 2 * (6 - i)) {
+                 document.write("*");
+				 } else {
+                 document.write("&nbsp");
+				}
+			}
+            document.write("<br>");
+		}
+    </script>
+</body>
+</html>

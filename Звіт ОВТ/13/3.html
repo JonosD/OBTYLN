@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Завдання 3</title>
+    <script>
+         function people (name, surname, age, sex, height) {
+             this.name = name;
+             this.surname = surname;
+             this.age = age;
+             this.sex = sex;
+             this.height = height;
+         }
+         people.prototype.print = function () {
+             document.write ("<br>" + "Name: " + this.name + "<br>" + "Surname: " + this.surname + "<br>" + "Age: " + this.age + "<br>" + "Sex: " + this.sex + "<br>" + "Height: " + this.height + "<br>");
+         }
+         people.prototype.sorted = function (x, y) {
+             return y.age - x.age;
+         }
+         var human1 = new people ("Ервін", "Сміт", 43, "чоловік", 185);
+         var human2 = new people ("Леві", "Аккерман", 30, "жінка", 160);
+         var human3 = new people ("Ханджі", "Зої", 29, "жінка", 178);
+         var human4 = new people ("Ерен", "Єгер", 20, "Чоловік", 192);
+         var human5 = new people ("Мікаса", "Аккерман", 19, "жінка", 175);
+            human1.print ();
+            human2.print ();
+            human3.print ();
+            human4.print ();
+            human5.print ();
+         var array = [human1, human2, human3, human4, human5];
+            array.sorted ();
+         for (var i = 0; i <array.length; i++) {
+             document.write (array[i].age);
+         }
+    </script>
+</head>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Завдання 2</title>
+    <script>
+            function Constructor (n, m) {
+           this.n = n;
+           this.m = m;
+           this.print = function () {
+               document.write ("(" + this.n + ", " + this.m + ")<br><br>");
+           }
+       }
+       Constructor.MaxConstructorCount = 100;
+       Constructor.getOrigin = function () {
+           return new Constructor (10, 10)
+       }
+       var p1 = new Constructor (100, 200);
+       p1.n = 100;
+       p1.m = 100;
+       p1.print ();
+
+       var p2 = new Constructor (100, 200);
+       p2.print ();
+
+       Constructor.MaxConstructorCount = 10;
+       Constructor.getOrigin (). print ();
+    </script>
+</head>
+</html>

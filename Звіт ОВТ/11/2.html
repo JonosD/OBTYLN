@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Завдання 2</title>
+    <script>
+        function add (a, b) {
+            return a + b;
+        }
+        function sub (a, b) {
+            return a - b;
+        }
+        function mul (a, b) {
+            return a * b;
+        }
+        function div (a, b) {
+            return a / b;
+        }
+        var operand1 = prompt ("Введіть число: ");
+        var sign = prompt ("Введіть знак арифметичної дії: + - * /");
+        var operand2 = prompt ("Введіть число: ");
+        var result = undefined;
+        operand1 = parseInt (operand1);
+        operand2 = parseInt (operand2);
+        switch (sign) {
+            case "+":
+                result = add (operand1, operand2);
+                break;
+            case "-":
+                result = sub (operand1, operand2);
+                break;
+            case "*":
+                result = mul (operand1, operand2);
+                break;
+            case "/":
+                result = div (operand1, operand2);
+                break;
+            default:
+                document.write (sign + " - !помилка!");
+        }
+        if (result != undefined)
+            document.write ("<p>" + operand1 + " " + sign + " " + operand2 + " = " + result);
+    </script>
+</head>
+<body>
+</body>
+</html>

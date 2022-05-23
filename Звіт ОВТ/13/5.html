@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Завдання 5</title>
+    <script>
+        function Rectangle(x, y) {
+         this.height = x;
+         this.widht = y;
+        }
+        Rectangle.prototype.getArea = function () {
+            return this.width * this.height;
+        }
+        Rectangle.prototype.toString = function () {
+            return "width:" + this.width + ";" + "height:" + this.height + ";";
+        }
+        var x = new Rectangle(10, 20);
+        var y = new Rectangle(20, 30);
+        document.write(x + "<br/></br>" + y.toString() + "<br />");
+    </script>
+</head>
+</html>
